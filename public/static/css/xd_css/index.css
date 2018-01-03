@@ -1,0 +1,370 @@
+body{
+    font-size: 15px;
+    color: #777777;
+    line-height: 1.8em;
+    font-weight: 400;
+    background: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Antic', sans-serif;
+}
+ul li{
+    list-style: none;
+}
+.page-wrapper{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 300px;
+}
+.main-header{
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    /*padding: 10px 0px;*/
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+.main-header .header-area{
+    position: relative;
+}
+.navborder{
+    width: 50px;
+}
+.navborder_1{
+    width: 70px;
+}
+.navbor{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #ff8800;
+    left: 0;
+    bottom: 0;
+}
+.nav a{
+    font-size: 14px;
+    display: block;
+    font-weight: 500;
+    color: #333;
+}
+.index_block_img{
+    margin-top: 4px;
+    overflow: hidden;
+}
+.spe-col-padd-2{
+    padding: 0 2px
+}
+.overflow-hid{
+    overflow: hidden;
+}
+.spe-col-padd-2{
+    padding: 0px 2px 0px 10px;
+}
+.index_block_img img{
+    width: 100%;
+}
+.index_news_region{
+    padding-left: 50px;
+    padding-top: 10px;
+    font-family: 'FZLTXHJW';
+}
+.new_ddcar{
+    color: #333333;font-size: 14px;font-family: 'FZLTXHJW'
+}
+.didi_footer{
+    background: none;
+    margin-top: 55px;
+    width: 100%;
+    max-width: 980px;
+    margin: 80px auto 0 auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    line-height: 60px;
+    color: #c3c3c3;
+    /*background-image: url(../images/footer-line.png);*/
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 980px 1px;
+}
+.contentlist{
+    background: #f7f7f7;
+    height: 124px;
+    overflow: hidden;
+    width: 100%;
+}
+.contentlist>ul{
+    margin: 31px auto 0;
+}
+.dd_menu>li:hover{
+    display: block;
+    background: blue;
+}
+.navfont a:hover{
+    color: #ff8800;
+    text-decoration: none;
+}
+#dd_client:hover{
+    display: block;
+    background: #ff8800;
+    color: white;
+}
+#dd_drive:hover{
+    display: block;
+    background: #ff8800;
+    color: white;
+}
+.content{
+    margin: 31px;
+    height: 124px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0;
+    cursor: pointer;
+}
+.content>li{
+    list-style: none;
+    width: 40%;
+    padding-left: 17%;
+    position: relative;
+    float: left;
+    line-height: 20px;
+}
+.content li:first-child{
+    border-right: 1px solid #e5e5e5;
+}
+.content .name{
+    font-size: 19px;
+    color: #333;
+    display: block;
+    font-weight: bold;
+}
+.content .normal{
+    color: #999999;
+    font-size: 12px;
+}
+.orageP>a{
+    color: #ff8900;
+    font-size: 12px;
+}
+.fullpage{
+    height: 100%;
+    position: relative;
+    touch-action: none;
+    /*transform: translate3d(0px, -371.333px, 0px);*/
+    transition: all 0ms ease;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+.driver_register .step {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 3px solid #A8A2A2;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.ih-item a {
+    cursor: default;
+}
+.ih-item a {
+    color: #333;
+}
+.ih-item.circle.effect11.left_to_right .img {
+    -webkit-transform: translateZ(0) rotateY(0);
+    -moz-transform: translateZ(0) rotateY(0);
+    -ms-transform: translateZ(0) rotateY(0);
+    -o-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+}
+.ih-item.circle.effect11 .img {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+.ih-item.circle.effect11 .img {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.ih-item.circle .img {
+    width: 150px;
+    height: 150px;
+    background: #a8a2a2;
+}
+.mt35 {
+    margin-top: 35px;
+}
+.m0 {
+    margin: 0;
+}
+.ih-item.circle .img {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+.each-step {
+    position: relative;
+    min-height: 1px;
+    width: 33.33333333333333%;
+    vertical-align: middle;
+}
+.ih-item.circle.effect11 {
+    -webkit-perspective: 900px;
+    -moz-perspective: 900px;
+    perspective: 900px;
+}
+.ih-item.circle {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-top: 35px;
+}
+.ih-item.circle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+.ih-item, .ih-item * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ih-item {
+    position: relative;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.float-left {
+    float: left;
+}
+.text-center {
+    text-align: center;
+}
+.position-re {
+    position: relative;
+}
+.overflow-hid {
+    overflow: hidden;
+}
+.intro .step_btn_outer {
+    margin-top: 0;
+}
+.driver_register {
+    margin-top: 64px;
+}
+.clear {
+    clear: both;
+}
+.step_btn_outer {
+    width: 352px;
+    height: 70px;
+    padding: 5px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 75px;
+    position: relative;
+}
+.didi_block_inner {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.fp-section.fp-table, .fp-slide.fp-table{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.didi_mess_block {
+    margin-top: -60px;
+    padding: 0 0 0 0;
+}
+.didi_mess_block {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 30px 0;
+}
+.fp-tableCell{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.section{
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+/* 小屏幕（桌面显示器，小于等于 350px） */
+@media (max-width: 350px)
+{
+    .imgheight{
+        height: 80px;
+    }
+    .navborder{
+        width: 100%;
+    }
+    .navborder_1{
+        width: 100%;
+    }
+}
+/* 小屏幕（平板，大于等于 350px  小于768px） */
+@media (min-width: 350px) and (max-width: 768px)
+{
+    .imgheight{
+        height: 80px;
+    }
+    .navborder{
+        width: 100%;
+    }
+    .navborder_1{
+        width: 100%;
+    }
+}
+/* 小屏幕（平板，大于等于 768px）小于1200px */
+@media (min-width: 768px) and (max-width: 1200px)
+{
+
+}
+/* 中等屏幕（桌面显示器，大于等于 1200） */
+@media  (min-width: 1200px)
+{
+
+}
+/* 大屏幕（大桌面显示器，大于等于 1660px） */
+@media (min-width: 1660px)
+{
+
+}
