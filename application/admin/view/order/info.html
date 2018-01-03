@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="__STATIC__/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="__STATIC__/lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui.admin/css/style.css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="__STATIC__/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>用户查看</title>
+</head>
+<body>
+<div class="cl pd-20" style=" background-color:#5bacb6">
+
+    <dl style="margin-left:80px; color:#fff">
+        <dt>
+            <span class="f-18">订单详情</span>
+            <span class="pl-10 f-12"></span>
+        </dt>
+        <dd class="pt-10 f-12" style="margin-left:0"></dd>
+    </dl>
+</div>
+<div class="pd-20">
+{foreach orderinfolist as $value}
+    <table class="table">
+        <tbody>
+        <tr>
+            <th class="text-r" width="80">订单ID：</th>
+            <td>{$value.d_id}</td>
+        </tr>
+        <tr>
+            <th class="text-r">用户ID：</th>
+            <td>{$value.d_userid}</td>
+        </tr>
+        <tr>
+            <th class="text-r">发布时间：</th>
+            <td>{$value.d_uptime}</td>
+        </tr>
+        <tr>
+            <th class="text-r">预计里程：</th>
+            <td>{$value.d_planmileage}&nbsp;<span style="font-weight: 700 ">km</span></td>
+        </tr>
+        <tr>
+            <th class="text-r">预计金额：</th>
+            <td><span style="font-weight: 700 ;">￥</span>{$value.d_plangold}</td>
+        </tr>
+        <tr>
+            <th class="text-r">乘坐人数：</th>
+            <td>{$value.d_peoples}&nbsp;<span style="font-weight: 700 ">人</span></td>
+        </tr>
+        <tr>
+            <th class="text-r">订单状态：</th>
+            <td>{$value.do_state}</td>
+        </tr>
+        <tr>
+            <th class="text-r">开始经度：</th>
+            <td>{$value.d_startlongitude}</td>
+        </tr>
+        <tr>
+            <th class="text-r">开始纬度：</th>
+            <td>{$value.d_startlatitude}</td>
+        </tr>
+        <tr>
+            <th class="text-r">结束经度：</th>
+            <td>{$value.d_endlongitude}</td>
+        </tr>
+        <tr>
+            <th class="text-r">结束纬度：</th>
+            <td>{$value.d_endlatitude}</td>
+        </tr>
+        <tr>
+            <th class="text-r">司机ID：</th>
+            <td>{$value.d_driverid}</td>
+        </tr>
+        <tr>
+            <th class="text-r">旅程开始时间：</th>
+            <td>{$value.d_starttime}</td>
+        </tr>
+        <tr>
+            <th class="text-r">旅程结束时间：</th>
+            <td>{$value.d_endtime}</td>
+        </tr>
+        <tr>
+            <th class="text-r">实际里程：</th>
+            <td>{$value.d_mileage}&nbsp;<span style="font-weight: 700 ">km</span></td>
+        </tr>
+        <tr>
+            <th class="text-r">实付金额：</th>
+            <td><span style="font-weight: 700 ;">￥</span>{$value.d_gold}</td>
+        </tr>
+        <tr>
+            <th class="text-r">付款时间：</th>
+            <td>{$value.d_paytime}</td>
+        </tr>
+        <tr>
+            <th class="text-r">付款金额：</th>
+            <td><span style="font-weight: 700 ; ">￥</span>{$value.d_paynumber}</td>
+        </tr>
+        <tr>
+            <th class="text-r">付款状态：</th>
+            <td>{$value.d_paystate}</td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="__STATIC__/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="__STATIC__/static/h-ui.admin/js/H-ui.admin.js"></script>
+<!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+</body>
+</html>

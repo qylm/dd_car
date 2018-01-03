@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>登录</title>  
+    <link rel="stylesheet" href="__STATIC__/css/pintuer.css">
+    <link rel="stylesheet" href="__STATIC__/css/admin.css">
+    <script src="__STATIC__/js/jquery.js"></script>
+    <script src="__STATIC__/js/angular.js"></script>
+    <script src="__STATIC__/js/pintuer.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl"  class="bg">
+<div></div>
+<div class="container">
+    <div class="line bouncein">
+        <div class="xs6 xm4 xs3-move xm4-move">
+            <div style="height:80px;"></div>
+            <div class="media media-y margin-big-bottom">           
+            </div>         
+            <form action="" method="post" name="myForm">
+            <div class="panel loginbox">
+                <div class="text-center margin-big padding-big-top"><h1>后台管理中心</h1></div>
+                <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
+                    <div class="form-group">
+                        <div class="field field-icon-right">
+                            <input type="text" class="input input-big" ng-value="myUser"  name="name" ng-model="name" ng-maxlength="20" ng-minlength="4" placeholder="登录账号" required="required" /> <!--data-validate="required:请填写账号"-->
+                            <!--<span class="icon icon-user margin-small"></span>-->
+                        </div>
+                        <div style="text-align: center;color: red"  ng-show="myForm.name.$error.required && myForm.name.$dirty && myForm.name.$invalid ">用户名输入不能为空</div> <!--$error.required--  错误情况-->
+                        <div style="text-align: center;color: red"  ng-show="myForm.name.$error.maxlength ">用户名长度不能超过20</div>
+                        <div style="text-align: center;color: red"  ng-show="myForm.name.$error.minlength ">用户名长度不能小于4</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="field field-icon-right">
+                            <input type="password" ng-value="myPwd" ng-model="password"  ng-minlength="6" ng-maxlength="12"  class="input input-big" name="password" placeholder="登录密码" required="required" /> <!--data-validate="required:请填写密码"-->
+                            <!--<span class="icon icon-key margin-small"></span>-->
+                        </div>
+                        <div style="text-align: center;color: red"  ng-show="myForm.password.$error.required && myForm.password.$dirty && myForm.password.$invalid ">密码输入不能为空</div> <!--$error.required--  错误情况-->
+                        <div style="text-align: center;color: red"  ng-show="myForm.password.$error.maxlength ">密码长度不能超过12</div>
+                        <div style="text-align: center;color: red"  ng-show="myForm.password.$error.minlength ">密码长度不能小于6</div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="field">
+                            <input type="text" ng-model="code"   ng-maxlength="4"    class="input input-big" name="code" placeholder="填写下方的验证码" required="required"/>  <!--data-validate="required:请填写右侧的验证码"-->
+                        </div>
+                        <div style="text-align: center;color: red;margin-top: 20px"  ng-show="myForm.code.$error.required && myForm.code.$dirty && myForm.code.$invalid ">验证码输入不能为空</div> <!--$error.required--  错误情况-->
+                        <div style="text-align: center;color: red;margin-top: 20px"  ng-show="myForm.code.$error.maxlength ">验证码长度不能超过4</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="field field-icon-right">
+                            <img src="{:captcha_src()}" alt="captcha" onclick="changeCode(this)">
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:30px;"><input type="button" class="button button-block bg-main text-big input-big" value="登录" ng-click="login()"></div>
+            </div>
+            </form>          
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    /*
+        ajax发送请求进行登录操作的地址
+    */
+    var url='{:url("admin/Login/dologin")}';
+    /*
+        登录成功后进行页面跳转到主页的路径
+     */
+    var url_index='{:url("admin/Index/index")}';
+    /*
+        切换验证码的方法
+     */
+    function changeCode(obj)
+    {
+        $(obj).attr('src','{:captcha_src()}');
+    }
+</script>
+<script src="__STATIC__/js/login.js"></script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="__STATIC__/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="__STATIC__/lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/static/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="__STATIC__/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>评价管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span>
+    评价管理
+    <span class="c-gray en">&gt;</span>
+    评价管理
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<form action="">
+    <div class="page-container">
+        <div class="text-c">
+            <input type="text"  id="appraise" name="findcontent"  placeholder="评价内容、id" style="width:250px" class="input-text">
+            <button name="" id="2" class="btn btn-success" type="submit" ><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+        </div>
+        <div class="cl pd-5 bg-1 bk-gray mt-20">
+		<span class="l">
+		<a href="javascript:;" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+		<a class="btn btn-primary radius"  href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加栏目</a>
+		</span>
+            <span class="r"><strong></strong></span>
+        </div>
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                <tr class="text-c">
+                    <th width="25"><input type="checkbox" name="" value=""></th>
+                    <th width="80">评价ID</th>
+                    <th width="80">用户ID</th>
+                    <th width="80">司机ID</th>
+                    <th width="150">评价时间</th>
+                    <th>评价内容</th>
+                    <th>评分</th>
+                    <th width="100">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach appraiselist as $value}
+                <tr class="text-c">
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>{$value.d_id}</td>
+                    <td>{$value.d_userid}</td>
+                    <td>{$value.d_driverid}</td>
+                    <td>{$value.d_time}</td>
+                    <td class="text-l">{$value.d_content}</td>
+                    <td>{$value.d_score}</td>
+                    <td class="f-14"><a title="编辑" href="javascript:;" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <a title="删除" href="javascript:;"  class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container text-center">
+        {$appraiselist->render()}
+    </div>
+</form>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="__STATIC__/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__STATIC__/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="__STATIC__/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__STATIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__STATIC__/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+    /*
+        获取评价Ajax发送请求的路径
+    */
+    $dd_findurl='{:url("admin/Appraise/appraise")}';
+
+
+</script>
+<script src="__STATIC__/js/appraise.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 响应meta设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>滴滴打车顺风车页面</title>
+    <link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="__STATIC__/css/xd_css/index.css"/>
+    <script type="text/javascript" src="__STATIC__/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/angular.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/vue.js"></script>
+    <script src="__STATIC__/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+    <div class="page-wrapper">
+<!----------------------------------------------------------------嘀嘀打车导航栏NAV---------------------------------------------------------------->
+        <nav class="navbar navbar-default main-header" style="position: fixed">
+            <div class="navbor"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"></a>
+                    </div>
+                    <div class="collapse navbar-collapse header-area clearfix" id="bs-example-navbar-collapse-1" style="width: 100%">
+                        <ul class="nav navbar-nav navfont" style="width: 100%;line-height: 40px;">
+                            <li class="col-lg-2 col-md-2 col-sm-2 text-center imgheight">
+                                <img src="__STATIC__/images/xd_images/login.png" alt="http://www.xiaojukeji.com/images/icon02.png" width="86px" style="vertical-align: middle;"/>
+                            </li>
+                            <li class="col-lg-2 col-md-2 col-sm-2"></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Index/index')}"  class="meuna">首页</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Hitching/hitching')}" class="meuna">顺风车</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1">
+                                <p class="text-center navborder dropdown"data-toggle="dropdown">
+                                    <a href="" class="meuna">
+                                        出租车
+                                    </a>
+                                <ul class="dropdown-menu text-center dd_menu">
+                                    <li><a id="dd_client">乘客端</a></li><!--class="active"-->
+                                    <li><a id="dd_drive">司机端</a></li>
+                                </ul>
+                                </p>
+                            </li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Express/express')}"  class="meuna">快车</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Subdrive/subdrive')}" class="meuna">代驾</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="#" class="meuna">企业版</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder_1"><a href="#" class="meuna">关于滴滴</a></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<!----------------------------------------------------------------Banner轮播图---------------------------------------------------------------->
+        <div id="carousel-example-generic" class="carousel slide " style="height: 100%;overflow: hidden;position: relative;width: auto">
+           <img src="http://static.xiaojukeji.com/pinche/images/website/banner4.jpg" width="100%"/>
+        </div>
+<!----------------------------------------------------------------adv广告---------------------------------------------------------------->
+        <div class="wrap contentlist">
+            <ul  class="conteiner-fluid content">
+                <li>
+                    <span class="name">招募有才华的你</span>
+                    <p class="normal">滴滴顺风车团队招贤纳士</p>
+                    <p class="orageP"><a>了解详情 ></a></p>
+                    <!--<img src="http://static.xiaojukeji.com/pinche/images/m_zp_icon.png" width="66px" style="position: absolute;left: 48px;top: -10px;vertical-align: middle;"/>-->
+                </li>
+                <li>
+                    <span class="name">关注微信服务号</span>
+                    <p class="normal">关注滴滴顺风车服务号，掌握最新活动资讯</p>
+                    <p class="orageP"><a>了解详情  ></a></p>
+                </li>
+            </ul>
+        </div>
+<!----------------------------------------------------------------页脚---------------------------------------------------------------->
+        <footer class="didi_footer">
+            <div class="col-sm-12">
+                ©2017 起源乱码科技有限公司
+                <span>卓越备案编号11000002002025号 卓ICP备12043664号-5　卓ICP证150329号 福网文【2015】2410-473</span>
+            </div>
+        </footer>
+    </div>
+<body>
+<script src="__STATIC__/js/xd_js/index.js"></script>
+<script>
+</script>
+</body>
+</html>

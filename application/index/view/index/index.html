@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 响应meta设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>滴滴打车首页</title>
+    <link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="__STATIC__/css/xd_css/index.css"/>
+    <script type="text/javascript" src="__STATIC__/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/angular.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/vue.js"></script>
+    <script src="__STATIC__/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+    <div class="page-wrapper">
+<!----------------------------------------------------------------嘀嘀打车导航栏NAV---------------------------------------------------------------->
+        <nav class="navbar navbar-default main-header" style="position: fixed">
+            <div class="navbor"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"></a>
+                    </div>
+                    <div class="collapse navbar-collapse header-area clearfix" id="bs-example-navbar-collapse-1" style="width: 100%">
+                        <ul class="nav navbar-nav navfont" style="width: 100%;line-height: 40px;">
+                            <li class="col-lg-2 col-md-2 col-sm-2 text-center imgheight">
+                                <img src="__STATIC__/images/xd_images/login.png" alt="http://www.xiaojukeji.com/images/icon02.png" width="86px" style="vertical-align: middle;"/>
+                            </li>
+                            <li class="col-lg-2 col-md-2 col-sm-2"></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Index/index')}"  class="meuna">首页</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Hitching/hitching')}" class="meuna">顺风车</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1">
+                                <p class="text-center navborder dropdown"data-toggle="dropdown">
+                                    <a href="" class="meuna">
+                                        出租车
+                                    </a>
+                                <ul class="dropdown-menu text-center dd_menu">
+                                    <li><a id="dd_client">乘客端</a></li><!--class="active"-->
+                                    <li><a id="dd_drive">司机端</a></li>
+                                </ul>
+                                </p>
+                            </li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Express/express')}"  class="meuna">快车</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Subdrive/subdrive')}" class="meuna">代驾</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="#" class="meuna">企业版</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder_1"><a href="#" class="meuna">关于滴滴</a></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<!----------------------------------------------------------------Banner轮播图---------------------------------------------------------------->
+        <div id="carousel-example-generic" class="carousel slide " data-ride="carousel" data-interval="2000" style="height: 100%;overflow: hidden;position: relative;width: auto">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner col-xs-12" role="listbox">
+                <div class="item active">
+                    <img src="http://www.xiaojukeji.com/images/banner/index0.jpg" alt="...">
+                    <!--<div class="carousel-caption">-->
+                    <!--</div>-->
+                </div>
+                <div class="item">
+                    <img src="http://www.xiaojukeji.com/images/banner/index1.jpg" alt="...">
+                    <!--<div class="carousel-caption">-->
+                    <!--</div>-->
+                </div>
+                <div class="item">
+                    <img src="http://www.xiaojukeji.com/images/banner/index2.jpg" alt="...">
+                    <!--<div class="carousel-caption">-->
+                    <!--</div>-->
+                </div>
+                <div class="item">
+                    <img src="http://www.xiaojukeji.com/images/banner/index3.jpg" alt="...">
+                    <!--<div class="carousel-caption">-->
+                        <!--...-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+<!----------------------------------------------------------------adv广告---------------------------------------------------------------->
+        <div class="index_block_img overflow-hid">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-10 spe-col-padd-2 phone_index_pa">
+                <a style="float: left">
+                    <img style="    width: 100%;" src="http://www.xiaojukeji.com/images/index-1.png"/>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-10 spe-col-padd-2 phone_index_pa">
+                <a style="float: left">
+                    <img style="    width: 100%;" src="http://www.xiaojukeji.com/images/index-2.png"/>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-10 spe-col-padd-2 phone_index_pa">
+                <a style="float: left">
+                    <img style="    width: 100%;" src="http://www.xiaojukeji.com/images/index-3.png"/>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-10 spe-col-padd-2 phone_index_pa">
+                <a style="float: left">
+                    <img style="    width: 100%;" src="http://www.xiaojukeji.com/images/index-4.png"/>
+                </a>
+            </div>
+        </div>
+<!----------------------------------------------------------------adv广告---------------------------------------------------------------->
+        <div class="index_block_img overflow-hid" style="background-color: #fafafa;margin-top: 40px;color: #c3c3c3;">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 spe-col-padd-2 phone_index_pa index_news_pic_phone">
+                <img src="http://www.xiaojukeji.com/images/fontpic.jpeg" class="index_block_img img"/>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 spe-col-padd-2 phone_index_pa index_news_region">
+                <div style="border-left:2px solid #ec8400;height:30px;width:100%;padding-left:10px;">
+                    <span style="font-size:21px;color:#333333;font-family: 'FZLTXHJW'">滴滴动态</span>
+                    <span style="padding-left:10px;font-size:14px;font-family:'Arial';color:#ff8901; cursor: pointer">ENGLISH >></span>
+                </div>
+                <div class="" style="width: 100%;color: #333333;">
+                    <ul style="margin-top: 16px;padding-left: 14px;">
+                        <li style="color: #ec8400;height: 40px;">
+                            <span class="new_ddcar">滴滴宣布出租车网约车融合方案升级 合作出租车企业超150家</span>
+                        </li>
+                        <li style="color: #ec8400;height: 40px;">
+                            <span class="new_ddcar">硅谷安全大腕加盟滴滴</span>
+                        </li>
+                        <li style="color: #ec8400;height: 40px;">
+                            <span class="new_ddcar">滴滴出行宣布布局单车领域</span>
+                        </li>
+                        <li style="color: #ec8400;height: 40px;">
+                            <span class="new_ddcar">滴滴出行“全国十大司机”出炉 分享、自强成关键词 </span>
+                        </li>
+                        <li style="    color: #ec8400;height: 40px;">
+                            <span class="new_ddcar">滴滴与近50家出租车企业达成合作 “智能派单”解决复杂出行需求 </span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="height:16px;width:100%;padding-left:18px;margin-bottom:0px;">
+                    <span style="color:#878787;font-size:14px;cursor: pointer">更多 >></span>
+                </div>
+            </div>
+        </div>
+<!----------------------------------------------------------------页脚---------------------------------------------------------------->
+        <footer class="didi_footer">
+            <div class="col-sm-12">
+                ©2017 起源乱码科技有限公司
+                <span>卓越备案编号11000002002025号 卓ICP备12043664号-5　卓ICP证150329号 福网文【2015】2410-473</span>
+            </div>
+        </footer>
+    </div>
+<body>
+<script src="__STATIC__/js/xd_js/index.js"></script>
+</body>
+</html>

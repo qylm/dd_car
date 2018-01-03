@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 响应meta设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>滴滴打车代驾页面</title>
+    <link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="__STATIC__/css/xd_css/index.css"/>
+    <script type="text/javascript" src="__STATIC__/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/angular.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/vue.js"></script>
+    <script src="__STATIC__/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+    <div class="page-wrapper">
+<!----------------------------------------------------------------嘀嘀打车导航栏NAV---------------------------------------------------------------->
+        <nav class="navbar navbar-default main-header" style="position: fixed">
+            <div class="navbor"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"></a>
+                    </div>
+                    <div class="collapse navbar-collapse header-area clearfix" id="bs-example-navbar-collapse-1" style="width: 100%">
+                        <ul class="nav navbar-nav navfont" style="width: 100%;line-height: 40px;">
+                            <li class="col-lg-2 col-md-2 col-sm-2 text-center imgheight">
+                                <img src="__STATIC__/images/xd_images/login.png" alt="http://www.xiaojukeji.com/images/icon02.png" width="86px" style="vertical-align: middle;"/>
+                            </li>
+                            <li class="col-lg-2 col-md-2 col-sm-2"></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Index/index')}"  class="meuna">首页</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Hitching/hitching')}" class="meuna">顺风车</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1">
+                                <p class="text-center navborder dropdown"data-toggle="dropdown">
+                                    <a href="" class="meuna">
+                                        出租车
+                                    </a>
+                                <ul class="dropdown-menu text-center dd_menu">
+                                    <li><a id="dd_client">乘客端</a></li><!--class="active"-->
+                                    <li><a id="dd_drive">司机端</a></li>
+                                </ul>
+                                </p>
+                            </li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Express/express')}"  class="meuna">快车</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="{:url('index/Subdrive/subdrive')}" class="meuna">代驾</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder"><a href="#" class="meuna">企业版</a></p></li>
+                            <li class="col-lg-1 col-md-1 col-sm-1"><p class="text-center navborder_1"><a href="#" class="meuna">关于滴滴</a></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<!----------------------------------------------------------------Banner轮播图---------------------------------------------------------------->
+        <div id="carousel-example-generic" class="carousel slide " style="height: 100%;overflow: hidden;position: relative;width: auto">
+            <img src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/header_bg.jpg" width="100%"/>
+        </div>
+        <div class="fullpage">
+<!----------------------------------------------------------------adv广告---------------------------------------------------------------->
+            <div class="section fp-section fp-table active" data-anchor="secondPage" style="height: 200px; background-color: rgb(255, 255, 255);">
+                <div class="fp-tableCell" style="height: 234px;">
+                    <div class="intro" style="width: 100%;position: relative;">
+                        <div class="didi_mess_block spe_pa_bottom phone_thr_screen">
+                            <div class="didi_block_inner">
+                                <div class="clear step_btn_outer web_dri_btn">
+                                    <h4 class="phone_img_side" width="150">
+                                        <img style="margin:10px auto;display:block;"width="150" src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/step-title.png"/>
+                                    </h4>
+                                </div>
+                                <div class="driver_register overflow-hid position-re">
+                                    <img class="step_line_one" src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/step-line.png" width="245"/>
+                                    <img class="step_line_two" src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/step-line.png" width="245"/>
+                                    <div class="text-center float-left each-step">
+                                    <div class="mb5">
+                                            <span class="step">
+                                                <img src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/step-1.png" style="position:relative; left:-2px;"width="6"/>
+                                            </span>
+                                    </div>
+                                    <div class="step_icon_outer">
+                                        <div class="ih-item circle colored effect11 left_to_right">
+                                            <a>
+                                                <div class="img step_online_one"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="step_icon_mess">
+                                        <p class="m0 mt35">
+                                            <img src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/shang1.png" width="178"/>
+                                        </p>
+                                    </div>
+                                </div>
+                                    <div class="text-center float-left each-step">
+                                        <div class="mb5">
+                                            <span class="step">
+                                                <img src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/step-2.png" style="position:relative; left:-2px;"width="6"/>
+                                            </span>
+                                        </div>
+                                        <div class="step_icon_outer">
+                                            <div class="ih-item circle colored effect11 left_to_right">
+                                                <a>
+                                                    <div class="img step_online_one"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="step_icon_mess">
+                                            <p class="m0 mt35">
+                                                <img src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/shang2.png" width="178"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center float-left each-step">
+                                        <div class="mb5">
+                                            <span class="step">
+                                                <img src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/step-3.png" style="position:relative; left:-2px;"width="6"/>
+                                            </span>
+                                        </div>
+                                        <div class="step_icon_outer">
+                                            <div class="ih-item circle colored effect11 left_to_right">
+                                                <a>
+                                                    <div class="img step_online_one"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="step_icon_mess">
+                                            <p class="m0 mt35">
+                                                <img src="http://static.udache.com/gulfstream/webapp/modules/udache_resources/images/shang3.png" width="178"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!----------------------------------------------------------------页脚---------------------------------------------------------------->
+            <footer class="didi_footer">
+                <div class="col-sm-12">
+                    ©2017 起源乱码科技有限公司
+                    <span>卓越备案编号11000002002025号 卓ICP备12043664号-5　卓ICP证150329号 福网文【2015】2410-473</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+<body>
+<script src="__STATIC__/js/xd_js/index.js"></script>
+<script>
+</script>
+</body>
+</html>
